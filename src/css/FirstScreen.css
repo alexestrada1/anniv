@@ -1,0 +1,97 @@
+.container {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered animations for individual elements */
+.welcome-text {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+  /* Animation properties */
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: slideInFromTop 1s ease-out 0.2s forwards;
+}
+
+.welcome-image {
+  width: 12rem;
+  height: 12rem;
+  object-fit: contain;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  
+  /* Animation properties */
+  opacity: 0;
+  transform: scale(0.8) rotateY(180deg);
+  animation: scaleRotateIn 1.2s ease-out 0.6s forwards;
+}
+
+.play-button {
+  padding: 1rem 2rem;
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(233, 30, 99, 0.3);
+  
+  /* Animation properties */
+  opacity: 0;
+  transform: translateY(30px) scale(0.9);
+  animation: bounceInUp 1s ease-out 1s forwards;
+}
+
+.play-button:hover {
+  background-color: #d81b60;
+  transform: scale(1.05);
+}
+
+/* Keyframe animations */
+@keyframes slideInFromTop {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleRotateIn {
+  to {
+    opacity: 1;
+    transform: scale(1) rotateY(0deg);
+  }
+}
+
+@keyframes bounceInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

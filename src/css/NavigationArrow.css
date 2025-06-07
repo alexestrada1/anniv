@@ -1,0 +1,40 @@
+/* NavigationArrow.css */
+
+.next-arrow {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.next-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: translateX(-50%) scale(1.1);
+}
+
+.next-arrow:active {
+  transform: translateX(-50%) scale(0.95);
+}
+
+.next-arrow span {
+  color: white;
+  font-size: 24px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.next-arrow.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
