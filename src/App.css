@@ -9,6 +9,14 @@
   background-attachment: fixed;  
   min-height: 100vh;
   width: 100vw;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Fix for iOS background-attachment: fixed issue */
+@media (max-width: 768px) {
+  .app-container {
+    background-attachment: scroll;
+  }
 }
 
 /* Main container for each screen */
@@ -17,8 +25,10 @@
   flex-direction: column;          
   align-items: center;             
   justify-content: center;         
-  height: 100vh;                  
+  min-height: 100vh;
   width: 100vw;
+  padding: 20px;
+  box-sizing: border-box;
   transform: scale(0);
   opacity: 0;
   transition: 
@@ -30,9 +40,26 @@
   transform: scale(1);
   opacity: 1;
 }
+
 @font-face {
   font-family: 'UcapSyukur';
   src: url('./assets/UcapSyukur-ov6Ez.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+    justify-content: flex-start;
+    padding-top: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 8px;
+    padding-top: 40px;
+  }
 }

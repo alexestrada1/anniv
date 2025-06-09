@@ -6,6 +6,8 @@
   align-items: center;
   justify-content: center;
   gap: 40px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .animation-area {
@@ -52,6 +54,49 @@
   animation: tumbleAway 3s forwards;
 }
 
+/* Mobile responsiveness for SecondScreen */
+@media (max-width: 768px) {
+  .second-screen {
+    gap: 30px;
+    padding: 15px;
+  }
+  
+  .animation-area {
+    height: 150px;
+  }
+  
+  .love-text {
+    font-size: 1.5rem;
+  }
+  
+  .img1,
+  .img2 {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .second-screen {
+    gap: 20px;
+    padding: 10px;
+  }
+  
+  .animation-area {
+    height: 120px;
+  }
+  
+  .love-text {
+    font-size: 1.2rem;
+  }
+  
+  .img1,
+  .img2 {
+    width: 80px;
+    height: 80px;
+  }
+}
+
 @keyframes tumbleAway {
   0% {
     transform: 
@@ -66,5 +111,25 @@
       translate(150px, 150px)
       rotate(1080deg);
     opacity: 0;
+  }
+}
+
+/* Mobile adjustment for tumble animation */
+@media (max-width: 480px) {
+  @keyframes tumbleAway {
+    0% {
+      transform: 
+        translate(-50%, -50%)
+        translate(0, 0)
+        rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform:
+        translate(-50%, -50%)
+        translate(100px, 100px)
+        rotate(1080deg);
+      opacity: 0;
+    }
   }
 }

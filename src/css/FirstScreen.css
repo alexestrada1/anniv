@@ -4,7 +4,6 @@
   animation: fadeInUp 0.8s ease-out forwards;
 }
 
-
 @keyframes fadeInUp {
   to {
     opacity: 1;
@@ -12,7 +11,6 @@
   }
 }
 
-/* Staggered animations for individual elements */
 .welcome-text {
   font-size: 4rem;
   margin-bottom: 2rem;
@@ -64,6 +62,43 @@
 .play-button:hover {
   background-color: #d81b60;
   transform: scale(1.05);
+}
+
+/* Mobile responsiveness for FirstScreen */
+@media (max-width: 768px) {
+  .welcome-text {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .welcome-image {
+    width: 8rem;
+    height: 8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .play-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-text {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .welcome-image {
+    width: 6rem;
+    height: 6rem;
+    margin-bottom: 1rem;
+  }
+  
+  .play-button {
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+  }
 }
 
 /* Keyframe animations */
